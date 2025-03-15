@@ -1,0 +1,170 @@
+/*Variables*/
+:root {
+    --color-link: #F27F3A;
+    --color-btn: #4A2824;
+    --color-text: #1F1F1F;
+    --color-white: #FFFFFF;
+    --color-title: #702421;
+    --color-bg-1: #FEE2D1;
+    --color-bg-2: #8E412B;
+    --color-bg-3: #702421;
+    --font-title: 'Indie Flower';
+    --font-text: 'Roboto Condensed';
+}
+
+/* VERSION MOBILE 0-767px*/
+/****** FOR ALL ******/
+* {
+    box-sizing: border-box;
+    color: var(--color-text);
+    font-family: var(--font-text), sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--color-bg-1);
+}
+h1, h2, h3 {
+    color: var(--color-title);
+    font-family: var(--font-title);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.section-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.section {
+    padding: 30px 20px;
+}
+.content-section {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+/****** HEADER ******/
+
+/****** MAIN ******/
+
+/****** FOOTER ******/
+.section-footer {
+    background-color: var(--color-bg-3);
+}
+.title-group,
+.hr-footer,
+.social-medias a i,
+.contact-and-copy div, .contact-and-copy a,
+.cgv-legal-mentions div, .cgv-legal-mentions span {
+    color: var(--color-white);
+}
+.section-footer .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+.title-group {
+    font-family: var(--font-title);
+    font-size: 32px;
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+.contact-mentions-and-medias {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+.social-medias {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.social-medias a i {
+    font-size: 24px;
+}
+.social-medias a i:hover {
+    color: var(--color-link);
+    transform: scale(1.1);
+}
+.contact-and-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contact-and-copy a:hover, .cgv-legal-mentions div:hover {
+    color: var(--color-link);
+}
+.cgv-legal-mentions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/* VERSION TABLET VERTICALE 768-1023px*/
+@media (min-width: 768px) {
+    /****** FOR ALL ******/
+
+    /****** HEADER ******/
+
+    /****** MAIN ******/
+
+    /****** FOOTER ******/
+}
+
+
+
+
+
+
+
+/* VERSION TABLET HORIZONTALE 1024-1219px*/
+@media (min-width: 1024px) {
+    /****** FOR ALL ******/
+
+    /****** HEADER ******/
+
+    /****** MAIN ******/
+
+    /****** FOOTER ******/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* VERSION COMPUTER 1220-infini px*/
+@media (min-width: 1220px) {
+    /****** FOR ALL ******/
+
+    /****** HEADER ******/
+
+    /****** MAIN ******/
+
+    /****** FOOTER ******/
+}
