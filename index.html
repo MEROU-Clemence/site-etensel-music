@@ -117,7 +117,47 @@
             </div>
         </section>
 
+        <!-- SECTION EXTRAITS -->
+        <section id="section-extracts" class="section-extraits" style="background-image: url(img/fond-principal.jpg)" draggable="false">
+            <div class="content-section">
+
+                <div class="section-title">
+                    <h2>Extraits</h2>
+                </div>
+
+                <div class="section-videos">
+                    <div id="Carousel-slider">
+                        <div class="Carousel-slider">
+                            <div class="slider-item" data-href="#">
+                                <video src="video/montage-1.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="slider-item" data-href="#">
+                                <video src="video/montage-1.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="slider-item" data-href="#">
+                                <video src="video/montage-1.mp4" autoplay muted loop playsinline></video>
+                            </div>
+                        </div>
+
+                        <!-- Boutons pour avancer/reculer -->
+                        <button id="prev-slide" class="slider-control prev"><i class="las la-angle-left"></i></button>
+                        <button id="next-slide" class="slider-control next"><i class="las la-angle-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="section-audio">
+
+                </div>
+
+            </div>
+        </section>
         
+        <!-- SECTION ALBUMS -->
+
+        <!-- SECTION AGENDA -->
+
+        <!-- SECTION CONTACT -->
+
     </main>
 
     <!-- FOOTER -->
@@ -158,6 +198,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
