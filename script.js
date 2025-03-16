@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     enableVideoClickPlay();
     pauseAllVideos();
 
-     // Assurez-vous que la vidéo commence à 0.5 secondes pour éviter l'écran noir
+    // Assurez-vous que la vidéo commence à 0.5 secondes pour éviter l'écran noir
     document.querySelectorAll('.Carousel-slider video').forEach((video) => {
         video.currentTime = 0.5;
         video.addEventListener('loadeddata', () => {
@@ -91,6 +91,42 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.pause();
                 sliderItem.classList.remove('is-playing');
             }
+        });
+    });
+
+    // ****** Pour vidéo solo
+    document.querySelectorAll('.video-solo').forEach((videoContainer) => {
+        const video = videoContainer.querySelector('video');
+        const iconPlay = videoContainer.querySelector('.icon-play');
+    
+        // Gérer le clic sur l'icône Play
+        iconPlay.addEventListener('click', () => {
+            if (video.paused) {
+                video.play(); // Lire la vidéo
+                videoContainer.classList.add('is-playing'); // Ajouter la classe is-playing
+            } else {
+                video.pause(); // Pauser la vidéo
+                videoContainer.classList.remove('is-playing'); // Retirer la classe is-playing
+            }
+        });
+    
+        // Gérer le clic sur la vidéo elle-même
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play(); // Lire la vidéo
+                videoContainer.classList.add('is-playing'); // Ajouter la classe is-playing
+            } else {
+                video.pause(); // Pauser la vidéo
+                videoContainer.classList.remove('is-playing'); // Retirer la classe is-playing
+            }
+        });
+    });
+
+    // Assurez-vous que la vidéo commence à 0.5 secondes pour éviter l'écran noir
+    document.querySelectorAll('.video-solo video').forEach((video) => {
+        video.currentTime = 0.5;
+        video.addEventListener('loadeddata', () => {
+            video.pause();
         });
     });
 });

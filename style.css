@@ -186,6 +186,15 @@ a {
     color: var(--color-white);
     text-align: center;
 }
+.section-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.section-videos h3 {
+    color: var(--color-bg-1);
+    text-align: center;
+}
 .Carousel-slider {
     height: 400px;
     position: relative;
@@ -234,11 +243,30 @@ a {
 .slider-item.is-playing .icon-play {
     display: none;
 }
+.video-solo-contain {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+.video-solo {
+    cursor: pointer;
+    max-width: 800px;
+    position: relative;
+    width: 100%;
+}
+.video-solo video {
+    border-radius: 20px;
+    height: auto;
+    width: 100%;
+}
 .section-audio {
     margin-top: 60px;
     text-align: center;
 }
-.section-audio h3, .section-videos h3 {
+.section-audio h3 {
     color: var(--color-bg-1);
     margin-bottom: 20px;
     text-align: center;
