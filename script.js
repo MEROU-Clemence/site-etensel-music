@@ -24,25 +24,73 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButton = document.getElementById('prev-slide');
     const nextButton = document.getElementById('next-slide');
 
-    // Écouteurs d'événements pour avancer/reculer
+    // Fonction pour mettre en pause toutes les vidéos
+    function pauseAllVideos() {
+        const videos = document.querySelectorAll('.Carousel-slider video');
+        videos.forEach((video) => video.pause());
+    }
+
+    // Fonction pour jouer une vidéo lorsqu'on clique dessus
+    function enableVideoClickPlay() {
+        const videos = document.querySelectorAll('.Carousel-slider video');
+        videos.forEach((video) => {
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    pauseAllVideos(); // Mettre en pause toutes les autres vidéos
+                    video.play(); // Jouer la vidéo cliquée
+                } else {
+                    video.pause(); // Si déjà en lecture, mettre en pause
+                }
+            });
+        });
+    }
+
+    // Écouteurs pour avancer/reculer dans le slider avec flèches
     prevButton.addEventListener('click', () => {
+        pauseAllVideos();
         CaroSlider.prev();
     });
 
     nextButton.addEventListener('click', () => {
+        pauseAllVideos();
         CaroSlider.next();
     });
 
-    // Gestion du clic sur les slides (ouvrir un lien si nécessaire)
-    let slideLinks = document.querySelectorAll('.slider-item');
-    if (slideLinks.length > 0) {
-        slideLinks.forEach(el =>
-            el.addEventListener('click', e => {
-                e.preventDefault();
-                let href = el.dataset.href;
-                let target = el.dataset.target || '_self';
-                if (href !== '#') window.open(href, target);
-            })
-        );
-    }
+    // Initialisation
+    enableVideoClickPlay();
+    pauseAllVideos();
+
+     // Assurez-vous que la vidéo commence à 0.5 secondes pour éviter l'écran noir
+    document.querySelectorAll('.Carousel-slider video').forEach((video) => {
+        video.currentTime = 0.5;
+        video.addEventListener('loadeddata', () => {
+            video.pause();
+        });
+    });
+
+    document.querySelectorAll('.slider-item').forEach((sliderItem) => {
+        const video = sliderItem.querySelector('video');
+        const playIcon = sliderItem.querySelector('.icon-play');
+    
+        playIcon.addEventListener('click', () => {
+            if (!sliderItem.classList.contains('is-playing')) {
+                video.play(); // Lire la vidéo
+                sliderItem.classList.add('is-playing');
+            } else {
+                video.pause(); // Mettre en pause si déjà en lecture
+                sliderItem.classList.remove('is-playing');
+            }
+        });
+    
+        // Optionnel : si l'utilisateur clique sur la vidéo elle-même
+        video.addEventListener('click', () => {
+            if (!sliderItem.classList.contains('is-playing')) {
+                video.play();
+                sliderItem.classList.add('is-playing');
+            } else {
+                video.pause();
+                sliderItem.classList.remove('is-playing');
+            }
+        });
+    });
 });

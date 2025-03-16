@@ -204,6 +204,35 @@ a {
     height: 360px;
     width: 360px;
 }
+.btn-slider-contain {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+.prev i, .next i {
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 30px;
+}
+.prev i:hover, .next i:hover {
+    color: var(--color-link);
+}
+.icon-play {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--color-white);
+    border-radius: 14px;
+    color: var(--color-white);
+    font-size: 24px;
+    left: 50%;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider-item.is-playing .icon-play {
+    display: none;
+}
 
 
 
