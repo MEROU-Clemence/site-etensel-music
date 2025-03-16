@@ -29,9 +29,11 @@ body {
     background-color: var(--color-bg-1);
 }
 h1, h2, h3 {
-    font-family: var(--font-title);
     margin-bottom: 0;
     margin-top: 0;
+}
+h1, h2 {
+    font-family: var(--font-title);
 }
 h1 {
     color: var(--color-white);
@@ -40,6 +42,13 @@ h1 {
 }
 h2, h3 {
     color: var(--color-title);
+}
+h2 {
+    font-size: 40px;
+}
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
 }
 .opacity {
     background: rgba(0, 0, 0, 0.20);
@@ -150,7 +159,27 @@ a {
     padding: 20px;
 }
 
-
+/* Section musiciens */
+.big-contain, .musicien-contain, .bloc-infos {
+    display: flex;
+    flex-direction: column;
+}
+.big-contain {
+    gap: 24px;
+}
+.musicien-contain, .bloc-infos {
+    gap: 10px;
+}
+.musicien-contain {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 12px;
+}
+.musicien-contain img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
 
 
 
@@ -235,6 +264,19 @@ a {
     h1 {
         font-size: 72px;
     }
+    h2 {
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 26px;
+    }
+    .section {
+        padding: 40px 30px;
+    }
+    .section-title {
+        margin-bottom: 32px;
+        text-align: start;
+    }
 
     /****** HEADER ******/
     /* Nav globale */
@@ -266,6 +308,28 @@ a {
     .section-presentation .content-section {
         padding: 50px;
     }
+
+    /* Section musiciens */
+    .musicien-contain:nth-child(odd) {
+        flex-direction: row;
+    }
+    .musicien-contain:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .musicien-contain, .bloc-infos {
+        gap: 20px;
+    }
+    .musicien-contain {
+        padding: 20px;
+    }
+    .musicien-contain img {
+        height: 330px;
+    }
+
+
+
+
+
 
     /****** FOOTER ******/
     .social-medias, .contact-and-copy, .cgv-legal-mentions {
@@ -309,6 +373,15 @@ a {
     h1 {
         font-size: 82px;
     }
+    h2 {
+        font-size: 58px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .section {
+        padding: 48px 40px;
+    }
 
     /****** HEADER ******/
     /* Nav globale */
@@ -346,7 +419,7 @@ a {
         bottom: 0;
         left: 0;
         width: 0;
-        height: 1px;
+        height: 1.5px;
         background-color: var(--color-white);
         transition: width 0.3s ease-in-out;
     }  
@@ -356,6 +429,19 @@ a {
     }
 
     /****** MAIN ******/
+    /* Section musiciens */
+    .big-contain {
+        gap: 32px;
+    }
+    .musicien-contain img {
+        height: 350px;
+    }
+
+
+
+
+
+
 
     /****** FOOTER ******/
     .section-footer .content-section {
@@ -387,10 +473,34 @@ a {
     h1 {
         font-size: 94px;
     }
+    h2 {
+        font-size: 62px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    .section {
+        padding: 52px 46px;
+    }
 
     /****** HEADER ******/
+    /* Nav desktop */
+    .nav-desktop ul {
+        gap: 40px;
+    }
+    .nav-desktop ul li a {
+        font-size: 22px;
+    }
 
     /****** MAIN ******/
+    /* Section musiciens */
+    .musicien-contain img {
+        height: 380px;
+    }
+
+
+
+
 
     /****** FOOTER ******/
 }
