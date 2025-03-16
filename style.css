@@ -60,8 +60,76 @@ h2, h3 {
 a {
     text-decoration: none;
 }
+.d-none {
+    display: none !important;
+}
 
 /****** HEADER ******/
+/* Nav globale */
+.first-nav {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+}
+.first-nav .content-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.social-medias.social-medias-header {
+    flex-wrap: nowrap;
+}
+.btn-menu {
+    color: var(--color-white);
+    font-size: 30px;
+}
+.btn-menu:hover {
+    color: var(--color-link);
+}
+
+/* Nav mobile */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 50px;
+}
+.nav-mobile.nav-mobile-active {
+    display: inherit;
+}
+.nav-mobile ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+}
+.nav-mobile ul li {
+    cursor: pointer;
+    background: var(--color-bg-1);
+    border: 1px solid var(--color-bg-3);
+    border-radius: 20px;
+    padding: 6px 12px;
+    text-align: center;
+    width: 150px;
+}
+.nav-mobile ul li a {
+    color: var(--color-bg-3);
+    font-weight: 500;
+}
+.nav-mobile ul li:hover {
+    background: var(--color-bg-3);
+    border: 1px solid var(--color-bg-1);
+}
+.nav-mobile ul li:hover a {
+    color: var(--color-bg-1);
+}
+
+/* Nav desktop */
+.nav-desktop {
+    display: none;
+}
 
 /****** MAIN ******/
 /* Img + title */
@@ -169,6 +237,26 @@ a {
     }
 
     /****** HEADER ******/
+    /* Nav globale */
+    .first-nav {
+        padding: 30px;
+    }
+    .btn-menu {
+        font-size: 36px;
+    }
+
+    /* Nav mobile */
+    .nav-mobile {
+        padding: 30px;
+        top: 55px;
+    }
+    .nav-mobile ul {
+        gap: 8px;
+    }
+    .nav-mobile ul li {
+        padding: 8px 14px;
+        width: 170px;
+    }
 
     /****** MAIN ******/
     /* Img + title */
@@ -223,6 +311,49 @@ a {
     }
 
     /****** HEADER ******/
+    /* Nav globale */
+    .first-nav {
+        padding: 40px 60px;
+    }
+    .social-medias {
+        justify-content: end;
+    }
+
+    /* Nav mobile */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Nav desktop */
+    .nav-desktop {
+        display: inherit;
+    }
+    .nav-desktop ul {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        list-style: none;
+    }
+    .nav-desktop ul li a {
+        color: var(--color-white);
+        font-size: 18px;
+        position: relative;
+        text-transform: uppercase;
+    }
+    .nav-desktop ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--color-white);
+        transition: width 0.3s ease-in-out;
+    }  
+    .nav-desktop ul li a:hover::after,
+    .nav-desktop ul li a:focus::after {
+        width: 100%;
+    }
 
     /****** MAIN ******/
 
