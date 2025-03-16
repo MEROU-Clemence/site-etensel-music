@@ -87,6 +87,7 @@ a {
 .social-medias {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
 }
@@ -101,6 +102,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+.little-title-footer {
+    font-style: oblique;
 }
 .contact-and-copy a:hover, .cgv-legal-mentions div:hover {
     color: var(--color-link);
@@ -131,16 +135,33 @@ a {
     /****** MAIN ******/
 
     /****** FOOTER ******/
+    .social-medias, .contact-and-copy, .cgv-legal-mentions {
+        width: 33%;
+    }
     .title-group {
         font-size: 44px;
     }
     .social-medias {
         gap: 20px;
+        justify-content: start;
     }
     .social-medias a i {
         font-size: 32px;
     }
-
+    .contact-mentions-and-medias {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px 30px 30px;
+    }
+    .cgv-legal-mentions {
+        flex-direction: column;
+        gap: 4px;
+        text-align: end;
+    }
+    .cgv-legal-mentions span {
+        display: none;
+    }
 }
 
 
@@ -158,6 +179,16 @@ a {
     /****** MAIN ******/
 
     /****** FOOTER ******/
+    .section-footer .content-section {
+        gap: 40px;
+    }
+    .title-group {
+        font-size: 48px;
+        padding-top: 40px;
+    }
+    .contact-mentions-and-medias {
+        padding: 0 40px 40px 40px;
+    }
 }
 
 
