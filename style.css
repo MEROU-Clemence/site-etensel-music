@@ -1,13 +1,10 @@
 /*Variables*/
 :root {
     --color-link: #F27F3A;
-    --color-btn: #4A2824;
     --color-text: #1F1F1F;
     --color-white: #FFFFFF;
     --color-title: #702421;
     --color-bg-1: #FEE2D1;
-    --color-bg-2: #8E412B;
-    --color-bg-3: #702421;
     --font-title: 'Indie Flower';
     --font-text: 'Roboto Condensed';
 }
@@ -117,18 +114,18 @@ a {
 .nav-mobile ul li {
     cursor: pointer;
     background: var(--color-bg-1);
-    border: 1px solid var(--color-bg-3);
+    border: 1px solid var(--color-title);
     border-radius: 20px;
     padding: 6px 12px;
     text-align: center;
     width: 150px;
 }
 .nav-mobile ul li a {
-    color: var(--color-bg-3);
+    color: var(--color-title);
     font-weight: 500;
 }
 .nav-mobile ul li:hover {
-    background: var(--color-bg-3);
+    background: var(--color-title);
     border: 1px solid var(--color-bg-1);
 }
 .nav-mobile ul li:hover a {
@@ -360,12 +357,41 @@ a {
     border: 2px solid #bc2222;
 }
 
-
-
+/* Section contact */
+.form-contact, .form-line.double-line {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.form-contact input, .form-contact textarea {
+    border: 1px solid var(--color-title);
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+}
+.btn-contain {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+.btn-contain .btn {
+    background: var(--color-title);
+    border: 1px solid var(--color-title);
+    border-radius: 10px;
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 10px 20px;
+    width: fit-content;
+}
+.btn-contain .btn:hover {
+    background: var(--color-link);
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
 
 /****** FOOTER ******/
 .section-footer {
-    background-color: var(--color-bg-3);
+    background-color: var(--color-title);
 }
 .title-group,
 .hr-footer,
@@ -423,13 +449,6 @@ a {
     gap: 12px;
     justify-content: center;
 }
-
-
-
-
-
-
-
 
 /* VERSION TABLET VERTICALE 768-1023px*/
 @media (min-width: 768px) {
@@ -524,10 +543,22 @@ a {
         height: 35px;
     }
 
-
-
-    
-
+    /* Section contact */
+    .form-contact {
+        gap: 20px;
+    }
+    .form-line.double-line {
+        flex-direction: row;
+    }
+    .form-line.double-line .form-group {
+        width: 50%;
+    }
+    .btn-contain {
+        margin-top: 32px;
+    }
+    .btn-contain .btn {
+        padding: 10px 30px;
+    }
 
     /****** FOOTER ******/
     .social-medias, .contact-and-copy, .cgv-legal-mentions {
@@ -558,12 +589,6 @@ a {
         display: none;
     }
 }
-
-
-
-
-
-
 
 /* VERSION TABLET HORIZONTALE 1024-1219px*/
 @media (min-width: 1024px) {
@@ -641,8 +666,13 @@ a {
         width: 31%;
     }
 
-
-
+    /* Section contact */
+    .form-contact input, .form-contact textarea {
+        padding: 12px 20px;
+    }
+    .btn-contain .btn {
+        padding: 12px 40px;
+    }
 
     /****** FOOTER ******/
     .section-footer .content-section {
@@ -656,17 +686,6 @@ a {
         padding: 0 40px 40px 40px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* VERSION COMPUTER 1220-infini px*/
 @media (min-width: 1220px) {
