@@ -645,7 +645,7 @@ a {
         height: 1.5px;
         background-color: var(--color-white);
         transition: width 0.3s ease-in-out;
-    }  
+    }
     .nav-desktop ul li a:hover::after,
     .nav-desktop ul li a:focus::after {
         width: 100%;
@@ -718,9 +718,61 @@ a {
         height: 380px;
     }
 
-
-
-
-
     /****** FOOTER ******/
+}
+
+/****** MODAL ******/
+.modal {
+  display: none; /* Cacher la modale par défaut */
+  position: fixed; /* Rester à la même position même quand on fait défiler */
+  z-index: 2000; /* Au-dessus de tout */
+  left: 0;
+  top: 0;
+  width: 100%; /* Plein écran */
+  height: 100%; /* Plein écran */
+  background-color: rgba(0, 0, 0, 0.7); /* Arrière-plan foncé avec opacité */
+}
+
+.modal-content {
+  background-color: var(--color-white); /* Fond blanc */
+  margin: 15% auto; /* 15% d'espace en haut et centré */
+  padding: 20px;
+  border-radius: 20px; /* Coins arrondis */
+  max-width: 600px; /* Largeur maximale */
+  width: 90%; /* 90% de la largeur sur petits écrans */
+  text-align: center; /* Centrer le texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'ombre pour un effet 3D */
+}
+
+.close {
+  color: var(--color-title);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--color-link); /* Utiliser la couleur de lien */
+  cursor: pointer;
+}
+
+#modal-message {
+  color: var(--color-title); /* Couleur de texte pour le message */
+  font-size: 18px; /* Taille de police du message */
+  margin-bottom: 20px; /* Ajout d'un espacement sous le message */
+}
+
+#modal-button {
+  padding: 10px 20px; /* Ajout de padding pour créer de l'espace autour du texte */
+  background: var(--color-title); /* Couleur de fond du bouton */
+  border: none; /* Supprime la bordure */
+  border-radius: 10px; /* Coins arrondis */
+  color: var(--color-white); /* Couleur du texte */
+  cursor: pointer; /* Change le curseur sur hover */
+  font-size: 16px; /* Taille de police du texte */
+}
+
+#modal-button:hover {
+  background: var(--color-link); /* Changement de couleur au survol */
 }
