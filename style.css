@@ -323,6 +323,16 @@ a {
 .month-calendar i:hover {
     color: var(--color-link);
 }
+.days {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.days span {
+    font-weight: 400;
+    text-align: center;
+    width: 14.3%;
+}
 .dates-calendar {
     display: flex;
     flex-direction: column;
@@ -346,7 +356,7 @@ a {
     font-weight: 500;
     height: 25px;
     justify-content: center;
-    width: 12.5%;
+    width: 14.3%;
 }
 .row-calendar .dispo {
     background: rgba(58, 191, 58, 0.2);
@@ -355,6 +365,12 @@ a {
 .row-calendar .undispo {
     background: rgba(188, 34, 34, 0.5);
     border: 2px solid #bc2222;
+    cursor: default;
+}
+.row-calendar .empty {
+    background: #d3d3d3;
+    border: 2px solid gray;
+    cursor: default;
 }
 
 /* Section contact */
