@@ -293,6 +293,10 @@ a {
     justify-content: center;
     width: 100%;
 }
+.agenda-contain-contain p {
+    color: white;
+    font-size: 24px;
+}
 .agenda-contain {
     align-items: center;
     border: 1px solid var(--color-bg-1);
