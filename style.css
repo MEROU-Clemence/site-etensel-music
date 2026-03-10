@@ -395,6 +395,15 @@ a {
     flex-direction: column;
     gap: 12px;
 }
+#section-contact .btn-left {
+    margin-top: -20px;
+}
+#section-contact .btn-left .btn {
+    background-color: #C96451;
+}
+#section-contact .btn-left .btn:hover {
+    background-color: var(--color-link);
+}
 .form-contact input, .form-contact textarea {
     border: 1px solid var(--color-title);
     border-radius: 20px;
@@ -405,6 +414,10 @@ a {
     display: flex;
     justify-content: end;
     margin-top: 20px;
+}
+.btn-left {
+    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 .btn-contain .btn {
     background: var(--color-title);
