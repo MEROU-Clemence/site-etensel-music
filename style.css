@@ -395,9 +395,6 @@ a {
     flex-direction: column;
     gap: 12px;
 }
-#section-contact .btn-left {
-    margin-top: -20px;
-}
 #section-contact .btn-left .btn {
     background-color: #C96451;
 }
@@ -416,10 +413,10 @@ a {
     margin-top: 20px;
 }
 .btn-left {
-    justify-content: flex-start;
+    display: flex;
     margin-bottom: 20px;
 }
-.btn-contain .btn {
+.btn-contain .btn, .btn-left .btn {
     background: var(--color-title);
     border: 1px solid var(--color-title);
     border-radius: 10px;
@@ -428,7 +425,7 @@ a {
     padding: 10px 20px;
     width: fit-content;
 }
-.btn-contain .btn:hover {
+.btn-contain .btn:hover, .btn-left .btn:hover {
     background: var(--color-link);
     border: 1px solid var(--color-white);
     color: var(--color-white);
@@ -601,7 +598,7 @@ a {
     .btn-contain {
         margin-top: 32px;
     }
-    .btn-contain .btn {
+    .btn-contain .btn, .btn-left .btn {
         padding: 10px 30px;
     }
 
@@ -724,7 +721,7 @@ a {
     .form-contact input, .form-contact textarea {
         padding: 12px 20px;
     }
-    .btn-contain .btn {
+    .btn-contain .btn, .btn-left .btn {
         padding: 12px 40px;
     }
 
