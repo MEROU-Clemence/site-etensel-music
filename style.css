@@ -167,6 +167,18 @@ a {
     padding: 20px;
 }
 
+/* Section description */
+.description-contain p {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.description-contain p:last-child {
+    margin-bottom: 0;
+}
+
 /* Section musiciens */
 .big-contain, .musicien-contain, .bloc-infos {
     display: flex;
