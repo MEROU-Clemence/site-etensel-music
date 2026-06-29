@@ -455,7 +455,7 @@ a {
 .hr-footer,
 .social-medias a i,
 .contact-and-copy div, .contact-and-copy a,
-.cgv-legal-mentions div, .cgv-legal-mentions span {
+.cgv-legal-mentions a, .cgv-legal-mentions span {
     color: var(--color-white);
 }
 .section-footer .content-section {
@@ -498,7 +498,7 @@ a {
 .little-title-footer {
     font-style: oblique;
 }
-.contact-and-copy a:hover, .cgv-legal-mentions div:hover {
+.contact-and-copy a:hover, .cgv-legal-mentions a:hover {
     color: var(--color-link);
 }
 .cgv-legal-mentions {
